@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">POS Launcher</string>
+    <string name="run_sale">Run Sale</string>
+    <string name="run_refund">Run Refund</string>
+    <string name="reverse_last">Reverse Last</string>
+    <string name="reverse_uti">Reverse Last by UTI</string>
+    <string name="preauth">Preauth</string>
+    <string name="completion">Completion</string>
+    <string name="query_transaction">Query Last Transaction by UTI</string>
+    <string name="x_report">Print X Report</string>
+    <string name="z_report">Print Z Report</string>
+    <string name="history_report">Print History Report</string>
+    <string name="cancel_trans">Cancel Transaction</string>
+    <string name="exit">Exit</string>
+
+    <string name="choose_option">Choose One Option</string>
+    <string name="view_trans_reports">View Transaction Results/Reports</string>
+    <string name="view_status">View Status Events</string>
+    <string name="title_response_fragment">Transaction Response</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="hint_amount">Amount (minor units)</string>
+    <string name="hint_rrn">Enter rrn here</string>
+    <string name="hint_cancel_time">Enter cancel time in milliseconds</string>
+    <string name="next">Next</string>
+
+</resources>

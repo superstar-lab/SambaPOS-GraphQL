@@ -1,0 +1,122 @@
+apply plugin: 'com.android.application'
+
+repositories {
+    maven {
+        url 'https://maven.google.com'
+    }
+    maven {
+        url 'https://oss.sonatype.org/content/repositories/ksoap2-android-releases/'
+    }
+    jcenter()
+    google()
+    mavenCentral()
+
+}
+
+
+buildscript {
+
+    ext {
+        minSdkVer = 21
+        targetSdkVer = 28
+        compileSdkVer = 28
+        androidToolsVersion = "3.3.2"
+        buildToolsVer = "28.0.3"
+        appCompatVersion = "28.0.0"
+        designVersion = "28.0.0"
+        paxstoreVersion = "7.0.1"
+        nanoHttpdVersion = "2.3.1"
+        multiDexVersion = "1.0.3"
+        constraintLayoutVersion = "1.1.3"
+        androidSupportVersion = "28.0.0"
+        jUnitVersion = "4.12"
+        lombokVersion = "1.18.2"
+        leakCanaryInstallVersion = "1.6.3"
+        lifeCycleExtensionsVersion = "1.1.1"
+        lifeCycleCompilerVersion = "1.1.1"
+        gsonVersion = "2.8.5"
+        stanfyVersion = "0.1.+"
+        supportPreferenceVersion = "28.0.0"
+        supportDesignVersion = "28.0.0"
+        supportVectorDrawableVersion = "28.0.0"
+        appSupportAnnotations = "28.0.0"
+        testRunnerVersion = "1.0.2"
+        testEspressoCoreVersion = "3.0.2"
+        ksoapVersion = "3.6.0"
+        uiAutomatorVersion = "2.1.2"
+        hamcrestLibraryVersion = "1.3"
+        testRunnerVersion = "0.5"
+        testRulesVersion = "0.5"
+    }
+
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:$androidToolsVersion"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+
+}
+
+android {
+    signingConfigs {
+    }
+    compileSdkVersion compileSdkVer
+    buildToolsVersion "$buildToolsVer"
+    defaultConfig {
+        applicationId "com.eft.positivelauncher"
+        minSdkVersion minSdkVer
+        targetSdkVersion targetSdkVer
+        versionCode 7
+        versionName "7.0"
+        archivesBaseName = "positivelauncher-$versionName"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+
+        }
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    api "com.android.support:appcompat-v7:$appCompatVersion"
+    api "com.android.support.constraint:constraint-layout:$constraintLayoutVersion"
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+    compileOnly "org.projectlombok:lombok:$lombokVersion"
+
+    //TODO RPAW: Replace these with build-server versions when available
+    //api project(':extlibs:libpositive')
+    debugImplementation(name: 'libpositive-0.01.18.4784-debug', ext: 'aar')
+    releaseImplementation(name: 'libpositive-0.01.18.4784-release', ext: 'aar')
+
+    implementation "org.nanohttpd:nanohttpd:$nanoHttpdVersion"
+
+    implementation "com.android.support:support-annotations:$appSupportAnnotations"
+
+    implementation "com.google.code.gson:gson:$gsonVersion"
+    implementation "com.amitshekhar.android:android-networking:1.0.2"
+
+
+}

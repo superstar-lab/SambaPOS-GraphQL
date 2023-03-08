@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/tv_screen_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_option"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:gravity="center"
+        android:layout_marginTop="110dp"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
+
+
+
+    <Button
+        android:id="@+id/btn_trans_results"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/view_trans_reports"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:visibility="visible"
+        />
+
+    <Button
+        android:id="@+id/btn_status_events"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/view_status"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:visibility="visible"
+        />
+
+
+</LinearLayout>

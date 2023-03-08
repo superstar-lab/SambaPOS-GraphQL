@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+
+    <TextView
+        android:id="@+id/tv_trans_response_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="20dp"
+        android:gravity="center|center_vertical"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/tv_trans_response_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_toRightOf="@id/tv_trans_response_name"
+        android:layout_alignParentRight="true"
+        android:gravity="right|center_vertical"/>
+
+</RelativeLayout>
